@@ -11,9 +11,10 @@ body {
     color: #f8f9fa;
     min-height: 100vh;
     padding: 20px;
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 20%);
+    background-image: url('./assests/images/unnamed.png');
+    background-position: absolute;
+    				radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 20%),
+    				radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 20%);
 }
 
 .container {
