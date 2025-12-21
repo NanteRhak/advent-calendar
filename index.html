@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier de l'Avent - Noël</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-snowflake"></i> Calendrier de l'Avent <i class="fas fa-snowflake"></i></h1>
+            <p class="subtitle">Découvrez une surprise chaque jour jusqu'à Noël !</p>
+            <div class="instructions">
+                <p><i class="fas fa-mouse-pointer"></i> Cliquez sur une case pour l'ouvrir (fonctionnalité jour 2)</p>
+            </div>
+        </header>
+
+        <main>
+            <div id="calendar-container" class="calendar-grid">
+                <!-- Les cases seront générées dynamiquement par JavaScript -->
+            </div>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="door locked"></div>
+                    <span>Verrouillé</span>
+                </div>
+                <div class="legend-item">
+                    <div class="door available"></div>
+                    <span>Disponible</span>
+                </div>
+                <div class="legend-item">
+                    <div class="door opened"></div>
+                    <span>Ouverte</span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Calendrier de l'Avent - Développement en 5 jours</p>
+            <p class="footer-info">Jour 1: Structure & logique | Jour 2: Système de dates & états</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
