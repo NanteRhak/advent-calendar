@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(135deg, #0a2e1d 0%, #1a472a 100%);
+    background: #FF033E 10%;
     color: #f8f9fa;
     min-height: 100vh;
     padding: 20px;
@@ -185,27 +185,6 @@ h1 {
 
 .legend-item .door:hover {
     transform: none;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: rgba(47, 79, 79, 0.3);
-    border-radius: 15px;
-    border: 2px solid #D4AF37;
-    margin-top: auto;
-}
-
-footer p {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-}
-
-.footer-info {
-    font-size: 0.9rem !important;
-    color: #D4AF37;
-    font-style: italic;
 }
 
 /* Responsive */

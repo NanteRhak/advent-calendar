@@ -3,7 +3,7 @@ const calendarData = [
     { id: 1, type: 'text', content: 'Une citation de Noël inspirante !', status: 'locked' },
     { id: 2, type: 'image', content: 'assets/image1.jpg', status: 'locked' },
     { id: 3, type: 'text', content: 'Le premier flocon de neige est le messager de l’hiver.', status: 'locked' },
-    { id: 4, type: 'text', content: 'Une idée cadeau originale !', status: 'locked' },
+    { id: 4, type: 'text', content: 'Une idée cadeau originale !', status: 'available' },
     { id: 5, type: 'music', content: 'assets/music1.mp3', status: 'locked' },
     { id: 6, type: 'text', content: 'La magie de Noël est dans l’air !', status: 'locked' },
     { id: 7, type: 'image', content: 'assets/image2.jpg', status: 'locked' },
@@ -64,33 +64,14 @@ function handleDoorClick(id) {
     // donc toutes les cases sont verrouillées
     // Cette fonction sera enrichie aux jours suivants
     
-    // Pour l'instant, on affiche juste un message dans la console
-    console.log(`Case cliquée : ${id}`);
-    console.log(`Contenu : ${calendarData.find(day => day.id === id).content}`);
-    console.log(`Type : ${calendarData.find(day => day.id === id).type}`);
-    
     // Afficher un message à l'utilisateur (sera remplacé par l'ouverture réelle au jour 3)
     alert(`Jour 1 : Cette fonctionnalité sera implémentée au jour 2-3.\n\nCase ${id} : ${calendarData.find(day => day.id === id).content}\n\nPour l'instant, toutes les cases sont verrouillées.`);
 }
 
 // Fonction d'initialisation
 function init() {
-    console.log("Initialisation du calendrier de l'Avent - Jour 1");
-    console.log("Structure de base avec 25 cases générées dynamiquement");
-    console.log("Modèle de données défini avec 25 entrées");
-    
     // Générer le calendrier
     generateCalendar();
-    
-    // Afficher un message de bienvenue dans la console
-    console.log("✅ Calendrier généré avec succès !");
-    console.log("📋 Tâches accomplies :");
-    console.log("   - Structure HTML avec conteneur grid");
-    console.log("   - Style CSS avec thème Noël (rouge #B22222, vert #2F4F4F, or #D4AF37)");
-    console.log("   - Génération dynamique des 25 cases");
-    console.log("   - Détection de clic sur chaque case");
-    console.log("   - Classes CSS préparées pour les jours suivants");
-    console.log("\n🚀 Prêt pour le Jour 2 : Système de dates & états !");
 }
 
 // Attendre que le DOM soit chargé
