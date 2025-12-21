@@ -122,43 +122,6 @@ h1 {
     transition: transform 0.1s;
 }
 
-/* États des cases (préparés pour les jours suivants) */
-.door.locked {
-    background: linear-gradient(145deg, #2F4F4F, #1e3e3e);
-    color: #8a8a8a;
-    cursor: not-allowed;
-    border-color: #5a5a5a;
-}
-
-.door.locked:hover {
-    transform: none;
-    background: linear-gradient(145deg, #2F4F4F, #1e3e3e);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.door.available {
-    background: linear-gradient(145deg, #2F4F4F, #1e3e3e);
-    animation: pulse 2s infinite;
-    border-color: #D4AF37;
-}
-
-.door.opened {
-    background: linear-gradient(145deg, #1a472a, #0a2e1d);
-    color: #90ee90;
-    border-color: #90ee90;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
-    }
-}
 
 /* Légende */
 .legend {
@@ -240,5 +203,128 @@ h1 {
         flex-direction: column;
         align-items: center;
         gap: 15px;
+    }
+}
+
+/* ============================================ */
+/* AJOUTS POUR LE JOUR 2 : LOGIQUE DE DATES */
+/* ============================================ */
+
+/* Style pour la case du jour (today) */
+.door.today {
+    border: 4px solid #D4AF37 !important;
+    transform: scale(1.05);
+    animation: todayPulse 2s infinite;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+/* Animation spéciale pour la case du jour */
+@keyframes todayPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+        transform: scale(1.05);
+    }
+    50% {
+        box-shadow: 0 0 20px 10px rgba(212, 175, 55, 0.4);
+        transform: scale(1.07);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+        transform: scale(1.05);
+    }
+}
+
+/* Amélioration du style locked */
+.door.locked {
+    background: linear-gradient(145deg, #2F4F4F, #1e3e3e) !important;
+    color: #8a8a8a !important;
+    cursor: not-allowed !important;
+    border-color: #5a5a5a !important;
+    opacity: 0.7;
+    filter: grayscale(0.5);
+}
+
+/* Amélioration du style available */
+.door.available {
+    background: linear-gradient(145deg, #2F4F4F, #1e3e3e) !important;
+    animation: pulse 2s infinite !important;
+    border-color: #D4AF37 !important;
+}
+
+/* Amélioration du style opened */
+.door.opened {
+    background: linear-gradient(145deg, #1a472a, #0a2e1d) !important;
+    color: #90ee90 !important;
+    border-color: #90ee90 !important;
+    cursor: default !important;
+}
+
+.door.opened:hover {
+    transform: none !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Style pour l'affichage de la date */
+.date-display {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #D4AF37;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Message système (pour les notifications) */
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    max-width: 300px;
+    animation: slideIn 0.3s ease-out;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Animation pour les messages */
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+
+/* Icône pour les cases déjà ouvertes */
+.door.opened::after {
+    content: '✓';
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 1rem;
+    color: #90ee90;
+    background: rgba(0, 0, 0, 0.5);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Ajustements responsive supplémentaires */
+@media (max-width: 480px) {    
+    .date-display {
+        font-size: 0.9rem;
+        padding: 6px 12px;
     }
 }

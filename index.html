@@ -16,6 +16,7 @@
         <header>
             <h1><i class="fas fa-snowflake"></i> Calendrier de l'Avent <i class="fas fa-snowflake"></i></h1>
             <p class="subtitle">Découvrez une surprise chaque jour jusqu'à Noël !</p>
+            <!-- L'affichage de la date sera ajouté dynamiquement par JavaScript -->
             <div class="instructions">
                 <p><i class="fas fa-mouse-pointer"></i> Cliquez sur une case pour l'ouvrir</p>
             </div>
@@ -29,11 +30,15 @@
             <div class="legend">
                 <div class="legend-item">
                     <div class="door locked"></div>
-                    <span>Verrouillé</span>
+                    <span>Verrouillé (futur)</span>
                 </div>
                 <div class="legend-item">
                     <div class="door available"></div>
                     <span>Disponible</span>
+                </div>
+                <div class="legend-item">
+                    <div class="door today"></div>
+                    <span>Aujourd'hui</span>
                 </div>
                 <div class="legend-item">
                     <div class="door opened"></div>
