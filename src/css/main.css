@@ -1,0 +1,23 @@
+/* Fichier principal qui importe tous les autres */
+@import 'reset.css';
+@import 'variables.css';
+@import 'base.css';
+@import 'layout.css';
+@import 'doors.css';
+@import 'messages.css';
+@import 'responsive.css';
+
+/* Styles d'impression */
+@media print {
+    .door {
+        break-inside: avoid;
+        border: 2px solid #000 !important;
+        background: #fff !important;
+        color: #000 !important;
+    }
+    
+    #debug-panel,
+    .message {
+        display: none !important;
+    }
+}

@@ -1,0 +1,80 @@
+/* Variables CSS globales - Thème de Noël */
+:root {
+    /* Couleurs principales */
+    --color-primary-red: #B22222;
+    --color-dark-red: #8b0000;
+    --color-hover-red: #c52a2a;
+    --color-hover-dark-red: #9e0000;
+    
+    --color-primary-green: #2F4F4F;
+    --color-dark-green: #1e3e3e;
+    --color-opened-green: #1a472a;
+    --color-dark-opened-green: #0a2e1d;
+    
+    --color-gold: #D4AF37;
+    --color-light-gold: rgba(212, 175, 55, 0.3);
+    --color-success: #90ee90;
+    --color-gray: #8a8a8a;
+    --color-dark-gray: #5a5a5a;
+    
+    /* Couleurs de texte */
+    --color-text-light: #f8f9fa;
+    --color-text-dark: #333;
+    --color-text-muted: #ccc;
+    
+    /* Espacements */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 40px;
+    
+    /* Bordures */
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 15px;
+    --border-radius-xl: 20px;
+    
+    /* Ombres */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.4);
+    --shadow-xxl: 0 12px 24px rgba(0, 0, 0, 0.5);
+    
+    /* Transitions */
+    --transition-fast: 0.1s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Z-index */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-modal: 300;
+    --z-popover: 400;
+    --z-tooltip: 500;
+    --z-toast: 1000;
+    
+    /* Dimensions du calendrier */
+    --door-aspect-ratio: 1;
+    --door-border-width: 4px;
+    
+    /* Responsive breakpoints */
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-wide: 1200px;
+}
+
+/* Classes utilitaires pour les thèmes */
+.theme-dark {
+    --color-background: #1a1a2e;
+    --color-surface: #16213e;
+    --color-text: #f8f9fa;
+}
+
+.theme-light {
+    --color-background: #f8f9fa;
+    --color-surface: #ffffff;
+    --color-text: #333;
+}
