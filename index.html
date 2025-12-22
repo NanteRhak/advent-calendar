@@ -2,52 +2,70 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendrier de l'Avent - Noël</title>
-    <link rel="stylesheet" href="./src/css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Calendrier de l'Avent Interactif - Spécial Noël</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Calendrier de l'avent 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-snowflake"></i> Calendrier de l'Avent <i class="fas fa-snowflake"></i></h1>
-            <p class="subtitle">Découvrez une surprise chaque jour jusqu'à Noël !</p>
-            <!-- L'affichage de la date sera ajouté dynamiquement par JavaScript -->
-            <div class="instructions">
-                <p><i class="fas fa-mouse-pointer"></i> Cliquez sur une case pour l'ouvrir</p>
+    <div class="snow-container" id="snowContainer"></div>
+    
+    <header class="header">
+        <h1><i class="fas fa-tree"></i> Calendrier de l'Avent Magique <i class="fas fa-tree"></i></h1>
+        <p class="subtitle">Découvrez une surprise chaque jour du 24 décembre au 17 janvier !</p>
+        
+        <div class="controls">
+            <div class="today-highlight">
+                <p>Aujourd'hui : <span id="todayDate"></span></p>
+                <p class="hint">La case du jour est mise en évidence en vert</p>
             </div>
-        </header>
+            
+            <div class="music-control">
+                <button id="musicToggle" class="btn-music">
+                    <i class="fas fa-music"></i> <span>Musique : ON</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-        <main>
-            <div id="calendar-container" class="calendar-grid">
+    <main class="container">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <h2><i class="fas fa-calendar-alt"></i> Ouvrez une case chaque jour</h2>
+                <p class="progress">Progression : <span id="progressCount">0</span> / 25 cases ouvertes</p>
+            </div>
+            
+            <div class="calendar-grid" id="calendarGrid">
                 <!-- Les cases seront générées dynamiquement par JavaScript -->
             </div>
             
-            <div class="legend">
-                <div class="legend-item">
-                    <div class="door locked"></div>
-                    <span>Verrouillé (futur)</span>
-                </div>
-                <div class="legend-item">
-                    <div class="door available"></div>
-                    <span>Disponible</span>
-                </div>
-                <div class="legend-item">
-                    <div class="door today"></div>
-                    <span>Aujourd'hui</span>
-                </div>
-                <div class="legend-item">
-                    <div class="door opened"></div>
-                    <span>Ouverte</span>
-                </div>
+            <div class="instructions">
+                <p><i class="fas fa-info-circle"></i> Cliquez sur les cases disponibles (en or) pour découvrir vos surprises !</p>
             </div>
-        </main>
+        </div>
+    </main>
+
+    <!-- Modal pour afficher les surprises -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-content" id="modalContent">
+                <!-- Le contenu de la surprise sera inséré ici -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-close" id="modalCloseBtn">Fermer</button>
+            </div>
+        </div>
     </div>
 
-    <script type="module" src="./src/js/app.js"></script>
+    <footer class="footer">
+        <p>Calendrier de l'Avent Interactif &copy; 2025 - Joyeux Noël et Bonne Année !</p>
+    </footer>
+
+    <!-- Anime.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Script unique pour éviter les problèmes CORS -->
+    <script src="script.js"></script>
 </body>
 </html>
