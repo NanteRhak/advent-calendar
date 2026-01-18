@@ -20,7 +20,7 @@ const surprisesData = [
         content: "Noël, ce n'est pas un jour ni une saison, c'est un état d'esprit. - Calvin Coolidge"
     },
     
-    // Cases restantes... (j'ai raccourci pour la démonstration)
+    // Case 3 - 26 décembre
     {
         type: "joke",
         title: "Blague de Noël",
@@ -30,7 +30,198 @@ const surprisesData = [
             answer: "Ho ! Ho ! Ho ! Ça va chauffer !"
         }
     },
-    // ... Ajoutez les 22 autres surprises ici
+    
+    // Case 4 - 27 décembre
+    {
+        type: "message",
+        title: "Pensée du jour",
+        icon: "fas fa-heart",
+        content: "Le plus beau cadeau de Noël reste le sourire des personnes qu'on aime."
+    },
+    
+    // Case 5 - 28 décembre
+    {
+        type: "quote",
+        title: "Citation festive",
+        icon: "fas fa-quote-right",
+        content: "À Noël, tous les chemins mènent à la maison. - Marjorie Holmes"
+    },
+    
+    // Case 6 - 29 décembre
+    {
+        type: "mini_game",
+        title: "Quiz de Noël",
+        icon: "fas fa-question-circle",
+        content: {
+            question: "Dans quelle ville est née la tradition du Père Noël ?",
+            answer: "À Rovaniemi, en Laponie finlandaise",
+            options: ["Strasbourg", "Rovaniemi", "New York", "Londres"]
+        }
+    },
+    
+    // Case 7 - 30 décembre
+    {
+        type: "recipe",
+        title: "Bûche de Noël facile",
+        icon: "fas fa-utensils",
+        content: "Ingrédients : 4 œufs, 100g sucre, 80g farine, 20g cacao, 200g crème liquide, 150g chocolat. Cuisson : 10min à 180°C. Garnir de crème au beurre."
+    },
+    
+    // Case 8 - 31 décembre
+    {
+        type: "diy_gift",
+        title: "Bougie maison",
+        icon: "fas fa-candy-cane",
+        content: "Faire fondre de la cire de soja, ajouter 10 gouttes d'huile essentielle de cannelle et 5 gouttes d'orange douce. Verser dans un pot avec une mèche. Laissez durcir 24h."
+    },
+    
+    // Case 9 - 1er janvier
+    {
+        type: "music",
+        title: "Last Christmas - Wham!",
+        icon: "fas fa-music",
+        content: "Découvrez ce classique intemporel de Noël : https://www.youtube.com/watch?v=E8gmARGvPlI"
+    },
+    
+    // Case 10 - 2 janvier
+    {
+        type: "wallpaper",
+        title: "Fond d'écran hivernal",
+        icon: "fas fa-image",
+        content: "Téléchargez ce magnifique paysage enneigé pour décorer votre écran. Lien : https://example.com/wallpaper1.jpg"
+    },
+    
+    // Case 11 - 3 janvier
+    {
+        type: "promo_code",
+        title: "Cadeau spécial",
+        icon: "fas fa-tag",
+        content: "Code promo : NOEL2024 - Profitez de -20% sur notre sélection de décorations festives jusqu'au 31 janvier."
+    },
+    
+    // Case 12 - 4 janvier
+    {
+        type: "message",
+        title: "Vœux du jour",
+        icon: "fas fa-snowflake",
+        content: "Que chaque flocon de neige vous apporte une raison de sourire aujourd'hui."
+    },
+    
+    // Case 13 - 5 janvier
+    {
+        type: "joke",
+        title: "Devinette festive",
+        icon: "fas fa-laugh-wink",
+        content: {
+            question: "Quel est le comble pour un sapin de Noël ?",
+            answer: "Avoir une boule dans la gorge !"
+        }
+    },
+    
+    // Case 14 - 6 janvier
+    {
+        type: "mini_game",
+        title: "Memory de Noël",
+        icon: "fas fa-brain",
+        content: {
+            instruction: "Trouvez les paires de symboles identiques !",
+            theme: "Symboles de Noël : cadeaux, sapins, boules, étoiles"
+        }
+    },
+    
+    // Case 15 - 7 janvier
+    {
+        type: "recipe",
+        title: "Cookies aux pépites",
+        icon: "fas fa-cookie-bite",
+        content: "Mélangez 200g farine, 1 œuf, 100g beurre, 80g sucre, 1 c.c. cannelle, 100g pépites. Formez des boules, cuire 12min à 175°C."
+    },
+    
+    // Case 16 - 8 janvier
+    {
+        type: "diy_gift",
+        title: "Sachets de thé maison",
+        icon: "fas fa-mug-hot",
+        content: "Mélangez thé noir, bâtons de cannelle, écorces d'orange séchées. Placez dans des sachets en coton. Parfait pour un cadeau personnalisé."
+    },
+    
+    // Case 17 - 9 janvier
+    {
+        type: "music",
+        title: "All I Want for Christmas - Mariah Carey",
+        icon: "fas fa-music",
+        content: "Écoutez ce tube incontournable : https://www.youtube.com/watch?v=yXQViqx6GMY"
+    },
+    
+    // Case 18 - 10 janvier
+    {
+        type: "wallpaper",
+        title: "Ciel étoilé festif",
+        icon: "fas fa-star",
+        content: "Admirez ce ciel étoilé avec un sapin illuminé. Téléchargement : https://example.com/wallpaper2.jpg"
+    },
+    
+    // Case 19 - 11 janvier
+    {
+        type: "promo_code",
+        title: "Offre spéciale",
+        icon: "fas fa-percentage",
+        content: "Code : JOYEUXNOEL - Livraison gratuite sur toute commande passée aujourd'hui."
+    },
+    
+    // Case 20 - 12 janvier
+    {
+        type: "quote",
+        title: "Pensée d'hiver",
+        icon: "fas fa-quote-left",
+        content: "L'hiver est la saison de réconfort, de bonne nourriture et de chaleur, du toucher d'une main amicale. - Alison Uttley"
+    },
+    
+    // Case 21 - 13 janvier
+    {
+        type: "riddle",
+        title: "Charade de Noël",
+        icon: "fas fa-lightbulb",
+        content: {
+            riddle: "Mon premier est une note de musique, mon second se trouve dans la mer, mon tout est un symbole de Noël.",
+            answer: "Sapin (fa + pin)"
+        }
+    },
+    
+    // Case 22 - 14 janvier
+    {
+        type: "mini_game",
+        title: "Puzzle festif",
+        icon: "fas fa-puzzle-piece",
+        content: {
+            instruction: "Reconstituez l'image du Père Noël et son traîneau !",
+            difficulty: "Facile - 16 pièces"
+        }
+    },
+    
+    // Case 23 - 15 janvier
+    {
+        type: "recipe",
+        title: "Vin chaud épicé",
+        icon: "fas fa-wine-glass-alt",
+        content: "Chauffez 1L de vin rouge avec 1 orange, 2 bâtons de cannelle, 4 clous de girofle, 50g sucre. Ne pas faire bouillir. Servir chaud avec une tranche d'orange."
+    },
+    
+    // Case 24 - 16 janvier
+    {
+        type: "diy_gift",
+        title: "Cartes de vœux artisanales",
+        icon: "fas fa-pen-fancy",
+        content: "Dessinez un sapin ou un bonhomme de neige sur du papier cartonné. Ajoutez un message personnalisé et quelques paillettes pour une touche magique."
+    },
+    
+    // Case 25 - 17 janvier
+    {
+        type: "final_message",
+        title: "Félicitations ! 🎉",
+        icon: "fas fa-trophy",
+        content: "Vous avez ouvert toutes les portes ! Merci d'avoir partagé cette aventure festive. Que la magie de Noël vous accompagne toute l'année. À l'année prochaine !"
+    }
 ];
 
 // 2. Gestion des dates
